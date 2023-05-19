@@ -1,0 +1,154 @@
+@import "reset";
+@import "globals";
+@import "function";
+
+body {
+  background-color: $lightGray;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  max-width: calc(100vw - rem(64));
+  border-radius: rem(8);
+  overflow: hidden;
+
+  &--community {
+    background-color: #fff;
+    padding: rem(28) rem(24) rem(32);
+
+    &__heading {
+      font-size: rem(20);
+      line-height: 1.15;
+      letter-spacing: -0.25px;
+      color: $cyan;
+      margin-bottom: rem(24);
+    }
+
+    &__subheading {
+      font-size: rem(15);
+      line-height: 1.33;
+      letter-spacing: -0.1875px;
+      color: $brightYellow;
+      margin-bottom: rem(16);
+    }
+
+    &__para {
+      font-size: rem(14);
+      line-height: 1.86;
+      font-weight: 400;
+      letter-spacing: -0.175px;
+      color: $grayishBlue;
+    }
+  }
+
+  &--price {
+    padding: rem(24);
+    background-color: $cyan;
+    color: #fff;
+
+    &__heading {
+      font-size: rem(18);
+      line-height: 1.16;
+      letter-spacing: -0.225px;
+      margin-bottom: rem(18);
+    }
+
+    &__pricing {
+      font-size: rem(32);
+      line-height: 1.16;
+      letter-spacing: -0.4px;
+      display: flex;
+      align-items: center;
+      gap: rem(11);
+      margin-bottom: rem(4);
+
+      & span {
+        font-size: rem(16);
+        line-height: 1.62;
+        letter-spacing: -0.2px;
+        opacity: 0.5;
+        font-weight: 400;
+      }
+    }
+
+    &__para {
+      line-height: 1.62;
+      letter-spacing: -0.2px;
+      margin-bottom: rem(26);
+    }
+
+    &__cta {
+      display: grid;
+      place-content: center;
+      background-color: $brightYellow;
+      color: #fff;
+      border-radius: rem(5);
+      width: 100%;
+      height: rem(48);
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  &--whyUs {
+    padding: rem(24);
+    color: #fff;
+    background-color: $cyan;
+    opacity: 0.75;
+
+    &__heading {
+      font-size: rem(18);
+      line-height: 1.16;
+      line-height: -0.225px;
+      margin-bottom: rem(18);
+    }
+
+    &__para {
+      font-size: rem(14);
+      line-height: 1.43;
+      letter-spacing: -0.175px;
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+  .card {
+    max-width: rem(635);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &--community {
+      grid-column: span 2;
+      padding: rem(40);
+
+      &__heading {
+        font-size: rem(24);
+        letter-spacing: -0.3px;
+      }
+
+      &__subheading {
+        font-size: rem(18);
+        line-height: 1.16;
+        letter-spacing: -0.225px;
+        margin-bottom: rem(11);
+      }
+
+      &__para {
+        font-size: rem(16);
+        line-height: 1.62;
+        letter-spacing: -0.2px;
+      }
+    }
+
+    &--price,
+    &--whyUs {
+      padding: rem(40);
+    }
+  }
+}

@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Karla", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: #e6eff5;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  max-width: calc(100vw - 4rem);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card--community {
+  background-color: #fff;
+  padding: 1.75rem 1.5rem 2rem;
+}
+.card--community__heading {
+  font-size: 1.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.25px;
+  color: #2ab3b1;
+  margin-bottom: 1.5rem;
+}
+.card--community__subheading {
+  font-size: 0.9375rem;
+  line-height: 1.33;
+  letter-spacing: -0.1875px;
+  color: #c0df33;
+  margin-bottom: 1rem;
+}
+.card--community__para {
+  font-size: 0.875rem;
+  line-height: 1.86;
+  font-weight: 400;
+  letter-spacing: -0.175px;
+  color: #9aa7be;
+}
+.card--price {
+  padding: 1.5rem;
+  background-color: #2ab3b1;
+  color: #fff;
+}
+.card--price__heading {
+  font-size: 1.125rem;
+  line-height: 1.16;
+  letter-spacing: -0.225px;
+  margin-bottom: 1.125rem;
+}
+.card--price__pricing {
+  font-size: 2rem;
+  line-height: 1.16;
+  letter-spacing: -0.4px;
+  display: flex;
+  align-items: center;
+  gap: 0.6875rem;
+  margin-bottom: 0.25rem;
+}
+.card--price__pricing span {
+  font-size: 1rem;
+  line-height: 1.62;
+  letter-spacing: -0.2px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+.card--price__para {
+  line-height: 1.62;
+  letter-spacing: -0.2px;
+  margin-bottom: 1.625rem;
+}
+.card--price__cta {
+  display: grid;
+  place-content: center;
+  background-color: #c0df33;
+  color: #fff;
+  border-radius: 0.3125rem;
+  width: 100%;
+  height: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.card--whyUs {
+  padding: 1.5rem;
+  color: #fff;
+  background-color: #2ab3b1;
+  opacity: 0.75;
+}
+.card--whyUs__heading {
+  font-size: 1.125rem;
+  line-height: 1.16;
+  line-height: -0.225px;
+  margin-bottom: 1.125rem;
+}
+.card--whyUs__para {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: -0.175px;
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+  .card {
+    max-width: 39.6875rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card--community {
+    grid-column: span 2;
+    padding: 2.5rem;
+  }
+  .card--community__heading {
+    font-size: 1.5rem;
+    letter-spacing: -0.3px;
+  }
+  .card--community__subheading {
+    font-size: 1.125rem;
+    line-height: 1.16;
+    letter-spacing: -0.225px;
+    margin-bottom: 0.6875rem;
+  }
+  .card--community__para {
+    font-size: 1rem;
+    line-height: 1.62;
+    letter-spacing: -0.2px;
+  }
+  .card--price, .card--whyUs {
+    padding: 2.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
